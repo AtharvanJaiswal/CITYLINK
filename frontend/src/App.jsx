@@ -3,11 +3,9 @@ import { Toaster } from 'react-hot-toast';
 import { useAuth } from '@hooks/useAuth';
 import { useEffect } from 'react';
 
-// Pages
 import Home from '@pages/Home';
 import SignInPage from '@pages/SignInPage';
-import AdminPage from '@pages/AdminPage';
-import ReportPage from '@pages/ReportPage';
+
 
 // Components
 import ProtectedRoute from '@components/auth/ProtectedRoute';
@@ -18,7 +16,7 @@ import './index.css';
 
 function App() {
   const { initialize, isLoading } = useAuth();
-
+  console.log("Auth loading", isLoading);
   useEffect(() => {
     // Initialize auth state when app loads
     initialize();
